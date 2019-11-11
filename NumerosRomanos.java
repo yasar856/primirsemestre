@@ -13,14 +13,14 @@ public class NumerosRomanos{
 			{"D", "Quinientos"},
 			{"M", "Mil"}
 			};
+	List<String> listRomanos = Arrays.asList("I", "V", "X", "L", "C", "D", "M");
 	public String convert(){
 		String result = "";
 		System.out.println("Escribe el numero romano");
 		String numero = this.getValue.nextLine();
 		String [] numeros = numero.split("");
-		List listRomanos = Arrays.asList(this.romanos);
 		for (int i=0; i<numeros.length; i++) {
-			if(listRomanos.contains(numeros[i])) {
+			if(this.listRomanos.contains(numeros[i])) {
 				for(int j = 0; j < this.romanos.length; j++) {
 					if(numeros[i].equals(this.romanos[j][0])) {
 						result = result + (this.romanos[j][1] + ' ');
